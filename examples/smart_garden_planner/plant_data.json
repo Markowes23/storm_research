@@ -19,5 +19,19 @@
         "sunlight": "full sun",
         "soil": "well-drained",
         "water_mm_per_week": 15
+    },
+    {
+        "name": "Carrot",
+        "climate": ["cool", "temperate"],
+        "sunlight": "full sun",
+        "soil": "loamy",
+        "water_mm_per_week": 20
+    },
+    {
+        "name": "Rosemary",
+        "climate": ["temperate", "warm"],
+        "sunlight": "full sun",
+        "soil": "well-drained",
+        "water_mm_per_week": 10
     }
 ]

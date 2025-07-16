@@ -1,3 +1,5 @@
+"""Utility functions for recommending plants and watering schedules."""
+
 import argparse
 import json
 from pathlib import Path
@@ -26,6 +28,7 @@ def recommend_plants(plants, climate, sunlight, soil):
 
 
 def watering_schedule(plant, rainfall):
+    """Return weekly water requirement and number of waterings."""
     required = max(plant["water_mm_per_week"] - rainfall, 0)
     if required == 0:
         times = 0
@@ -36,6 +39,14 @@ def watering_schedule(plant, rainfall):
     else:
         times = 3
     return required, times
+
+
+def watering_string(plant, rainfall):
+    required, times = watering_schedule(plant, rainfall)
+    if times == 0:
+        return "no extra watering needed"
+    plural = "time" if times == 1 else "times"
+    return f"water {required}mm/week ({times} {plural})"
 
 
 def main():
