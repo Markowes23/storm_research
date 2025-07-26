@@ -269,6 +269,22 @@ python examples/costorm_examples/run_costorm_gpt.py \
     --retriever bing
 ```
 
+### Smart Garden Planner example
+
+The `examples/smart_garden_planner` folder contains a small demo that
+generates plant recommendations and watering schedules based on simple
+climate inputs. It includes a Streamlit interface for quick exploration.
+
+```bash
+streamlit run examples/smart_garden_planner/web_app.py
+```
+
+You can also run the command line tool:
+
+```bash
+python examples/smart_garden_planner/garden_planner.py --climate temperate --sunlight "full sun" --soil loamy --rainfall 5
+```
+
 
 ## Customization of the Pipeline
 
